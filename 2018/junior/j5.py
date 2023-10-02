@@ -2,7 +2,7 @@ from itertools import chain
 
 # working implementation
 class Solution:
-    def choose_your_own_path(input: str) -> str:
+    def choose_your_own_path(self, input: str) -> str:
         N, *pages = input.splitlines()
         path_lengths = []
 
@@ -46,6 +46,7 @@ def choose_your_own_path_2(input: str) -> str:
     print(f'{pages}\n\n')
     for path in all_paths:
         print(path)
+    return ''
 
 def choose_your_own_path_bfs(input: str) -> str:
     N, *raw_pages = input.splitlines()
