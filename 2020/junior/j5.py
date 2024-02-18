@@ -34,4 +34,7 @@ class Solution:
             if row == M and col == M:
                 return True
 
-            grid[row][col]
+            if (row, col) in seen:
+                return False
+
+            return dfs()
