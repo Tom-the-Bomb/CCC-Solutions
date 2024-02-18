@@ -5,8 +5,8 @@ Solution for problem 3: Harp Tuning
 import re
 
 class Solution:
-    def harp_tuning(self, input: str) -> int:
-        parsed = re.split(r'([+-]\d+)', input)
+    def harp_tuning(self) -> int:
+        parsed = re.split(r'([+-]\d+)', input())
 
         output = ''
         for element in parsed:
