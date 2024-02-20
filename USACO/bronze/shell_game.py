@@ -7,8 +7,8 @@ http://www.usaco.org/index.php?page=viewproblem2&cpid=891
 class Solution:
     def shell_game(self, inp: str) -> int:
         shells = [1, 2, 3]
-        n, *lines = inp.splitlines()
-        
+        _, *lines = inp.splitlines()
+
         scores = [0, 0, 0]
         for line in lines:
             a, b, g = [int(x) for x in line.split()]

@@ -1,5 +1,8 @@
-from collections import deque
+"""
+Solution for problem 5: Escape Room
+"""
 
+from collections import deque
 
 class Solution:
     def escape_room(self):
@@ -37,4 +40,4 @@ class Solution:
             if (row, col) in seen:
                 return False
 
-            return dfs()
+            seen.add((row, col))
