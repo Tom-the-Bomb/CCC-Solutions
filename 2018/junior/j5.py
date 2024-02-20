@@ -29,6 +29,7 @@ class Solution:
     # Alternative implementations below ...:
     #
     # (WIP)
+    #
     def choose_your_own_path_2(self) -> str:
         N = int(input())
         pages = {

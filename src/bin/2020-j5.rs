@@ -1,3 +1,7 @@
+//!
+//! Solution for problem 5: Escape Room
+//!
+
 use std::{
     io,
     collections::{HashSet, VecDeque},
