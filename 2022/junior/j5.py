@@ -3,7 +3,7 @@ Solution for problem 5: Square Pool
 """
 
 class Solution:
-    def square_pool_bf(self) -> int:
+    def square_pool_bf(self) -> int: # type: ignore
         N = int(input())
 
         trees = []

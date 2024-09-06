@@ -32,6 +32,35 @@ class Solution:
                         seen.add((i, j))
         return 'no'
 
+    def escape_room_dfs_bf(self) -> str:
+        # DFS implementation
+
+        M = int(input())
+        N = int(input())
+        grid = [[int(x) for x in input().split()] for _ in range(M)]
+
+        seen = set()
+
+        def _dfs(row, col) -> str:
+            if row == M and col == N:
+                return 'yes'
+
+            seen.add((row, col))
+            tile = grid[row - 1][col - 1]
+
+            for i in range(1, M + 1):
+                row = i + 1
+                col, rem = divmod(tile, row)
+
+                if tile > row and rem == 0 and (row, col) not in seen:
+                    result = _dfs(row, col)
+
+                    if result == 'yes':
+                        return result
+            return 'no'
+
+        return _dfs(1, 1)
+
     def escape_room(self) -> str:
         # [best solution]: BFS + mapping table
 
